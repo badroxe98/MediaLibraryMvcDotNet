@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MiniProjetKhaoudi.Models;
 
 namespace MiniProjetKhaoudi.Models
 {
@@ -14,5 +15,7 @@ namespace MiniProjetKhaoudi.Models
         }
 
         public DbSet<MiniProjetKhaoudi.Models.Book> Book { get; set; }
+
+        public DbSet<MiniProjetKhaoudi.Models.VideoGame> VideoGame { get; set; }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniProjetKhaoudi.Models;
 
 namespace MiniProjetKhaoudi.Migrations
 {
     [DbContext(typeof(MiniProjetKhaoudiContext))]
-    partial class MiniProjetKhaoudiContextModelSnapshot : ModelSnapshot
+    [Migration("20200510135605_GamesInitial")]
+    partial class GamesInitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

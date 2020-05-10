@@ -1,12 +1,13 @@
-﻿@model MiniProjetKhaoudi.Models.Book
+﻿@model MiniProjetKhaoudi.Models.VideoGame
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h2 style="color:blue">Details of Book:</h2>
+<h2>Details</h2>
 
 <div>
+    <h4>VideoGame</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -16,16 +17,22 @@
             @Html.DisplayFor(model => model.Title)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.author)
+            @Html.DisplayNameFor(model => model.genre)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.author)
+            @Html.DisplayFor(model => model.genre)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.Developer)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Category)
+            @Html.DisplayFor(model => model.Developer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Plateform)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Plateform)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.ReleaseDate)

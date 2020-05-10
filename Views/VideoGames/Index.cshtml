@@ -1,0 +1,75 @@
+﻿@model MiniProjetKhaoudi.Models.VideoGameGenreViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 style="color:blue">VideoGames:</h2>
+
+<p>
+    <a asp-action="Create">Add New VideoGame</a>
+</p>
+<form asp-controller="VideoGames" asp-action="Index">
+    <p>
+        <select asp-for="VideoGameGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
+        Title:<input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].genre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].Developer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].Plateform)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].ReleaseDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Games[0].Rating)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Games)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Developer)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Plateform)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReleaseDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | 
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

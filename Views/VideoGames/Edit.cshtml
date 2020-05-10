@@ -1,10 +1,10 @@
-﻿@model MiniProjetKhaoudi.Models.Book
+﻿@model MiniProjetKhaoudi.Models.VideoGame
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h2 style="color:blue">Edit the Book:</h2>
+<h2 style="color:blue">Edit the VideoGame:</h2>
 
 <hr />
 <div class="row">
@@ -18,14 +18,19 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="author" class="control-label"></label>
-                <input asp-for="author" class="form-control" />
-                <span asp-validation-for="author" class="text-danger"></span>
+                <label asp-for="genre" class="control-label"></label>
+                <input asp-for="genre" class="form-control" />
+                <span asp-validation-for="genre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
-                <span asp-validation-for="Category" class="text-danger"></span>
+                <label asp-for="Developer" class="control-label"></label>
+                <input asp-for="Developer" class="form-control" />
+                <span asp-validation-for="Developer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Plateform" class="control-label"></label>
+                <input asp-for="Plateform" class="form-control" />
+                <span asp-validation-for="Plateform" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ReleaseDate" class="control-label"></label>

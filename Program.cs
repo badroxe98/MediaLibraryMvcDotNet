@@ -28,6 +28,7 @@ namespace MiniProjetKhaoudi
                     var context = services.GetRequiredService<MiniProjetKhaoudiContext>();
                     context.Database.Migrate();
                     SeedData.Initialize(services);
+                    SeedDataGames.Initialize(services);
                 }
                 catch(Exception ex)
                 {
